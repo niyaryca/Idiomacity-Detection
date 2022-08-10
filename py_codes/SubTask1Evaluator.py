@@ -76,16 +76,3 @@ def evaluate_submission( submission_file, gold_labels ) :
     output.append( this_entry ) 
 
   return output
-
-
-
-if __name__ == '__main__' :
-  
-  submission_file = sys.argv[1]
-  gold_file       = sys.argv[2]
-
-  
-  results = evaluate_submission( submission_file, gold_file )
-
-  for row in results :
-    print( '\t'.join( [ str( i ) for i in row ] ) ) 
