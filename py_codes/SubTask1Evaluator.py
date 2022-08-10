@@ -16,7 +16,7 @@ def load_csv( path ) :
 
 
 
-def _f1score( submission_data, submission_headers, gold_data, gold_headers, languages, settings )  :
+def _score( submission_data, submission_headers, gold_data, gold_headers, languages, settings )  :
 
   if len( settings ) == 2 :
     assert len( languages ) == 2
@@ -42,7 +42,7 @@ def _f1score( submission_data, submission_headers, gold_data, gold_headers, lang
   y_pred = [ int( i ) for i in y_pred ]
   y_true = [ int( i ) for i in y_true ]
   f1_macro    = f1_score( y_true, y_pred, average='macro' )
-  average_score = average_score(y_true,y_pred)
+  average_score = accuracy_score(y_true,y_pred)
   return [f1_macro,average_score]
 
 
