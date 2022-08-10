@@ -59,7 +59,7 @@ def evaluate_submission( submission_file, gold_labels ) :
     print( "ERROR: Incorrect gold labels data format (did you use the correct file?)", file=sys.stderr ) 
     sys.exit()
 
-  output = [ [ 'Settings', 'Languages', "F1 Score (Macro)","Average Score" ] ]
+  output = [ [ 'Settings', 'Languages', "F1 Score (Macro)","Accuracy Score" ] ]
   
   for languages, settings in [ 
      [ [ 'EN' ]      , [ 'zero_shot' ] ], 
